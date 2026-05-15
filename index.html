@@ -327,7 +327,6 @@
 
     const TEST_CODE_FIXO = "BIPOLARIDADE_RELACIONADOS_V2";
 
-    
 
     
    const AREA_PACIENTE_URL = "https://integradaneuropsicologia.github.io/area-do-paciente-v2/";
@@ -375,295 +374,570 @@ const SCALE_SCORE_MAPS = {
     /**************************************************************
  * CONFIGURAÇÃO DAS PERGUNTAS (DINÂMICO)
  **************************************************************/
+
 const FORM_QUESTIONS = [
   {
-  name: "1",
-  type: "radio",
-  text: "Meu humor e minha energia mudam bastante entre fases de alta e fases de baixa.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "2",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, eu fico muito mais ativo(a) e com muito mais energia do que o meu normal.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "3",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, meu humor fica muito elevado (muito “pra cima”) ou muito irritado(a).",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "4",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, eu durmo bem menos do que o normal e mesmo assim me sinto bem e cheio(a) de energia.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "5",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, eu falo muito mais do que o normal ou sinto que não consigo parar de falar.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "6",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, minha mente fica acelerada (pensamentos a mil).",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "7",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, eu me distraio muito fácil com coisas pequenas.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "8",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, eu assumo muitas tarefas ao mesmo tempo e tenho dificuldade de desacelerar.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "9",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, eu me sinto mais confiante do que o normal (às vezes confiante demais).",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "10",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, eu fico mais sociável e falante do que o meu normal.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "11",
-  type: "radio",
-  text: "Quando eu estou na fase de alta, eu faço coisas impulsivas que podem dar problema (gastos, sexo, decisões arriscadas) e depois me arrependo.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "12",
-  type: "radio",
-  text: "As minhas fases de alta costumam durar dias ou semanas.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "13",
-  type: "radio",
-  text: "Em alguma fase de alta, eu já tive delírios ou alucinações (ver/ouvir coisas, ou ter certezas muito fora da realidade).",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "14",
-  type: "radio",
-  text: "Em alguma fase de alta, eu já precisei de hospitalização (ou alguém disse que eu precisava) por causa do meu comportamento ou risco.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "15",
-  type: "radio",
-  text: "Quando eu estou na fase de baixa, eu fico sem energia, desanimado(a) ou mais lento(a) do que o meu normal.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "16",
-  type: "radio",
-  text: "Quando eu estou na fase de baixa, eu sinto tristeza, vazio ou desesperança com frequência.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "17",
-  type: "radio",
-  text: "Quando eu estou na fase de baixa, eu perco muito o interesse ou prazer pelas coisas.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "18",
-  type: "radio",
-  text: "Quando eu estou na fase de baixa, meu apetite ou meu peso mudam bastante (para mais ou para menos).",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "19",
-  type: "radio",
-  text: "Quando eu estou na fase de baixa, eu fico muito agitado(a) ou muito lento(a), e outras pessoas percebem isso.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "20",
-  type: "radio",
-  text: "Quando eu estou na fase de baixa, eu me sinto inútil ou com culpa exagerada.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "21",
-  type: "radio",
-  text: "Quando eu estou na fase de baixa, eu tenho muita dificuldade para pensar, me concentrar ou tomar decisões.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "22",
-  type: "radio",
-  text: "Quando eu estou na fase de baixa, eu tenho pensamentos de morte ou ideias de suicídio.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "23",
-  type: "radio",
-  text: "As minhas fases de baixa costumam durar dias ou semanas.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "24",
-  type: "radio",
-  text: "O meu sono muda claramente nessas fases (na alta eu durmo menos; na baixa eu durmo demais ou tenho insônia).",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "25",
-  type: "radio",
-  text: "Essas fases (de alta ou de baixa) atrapalham minha vida de forma clara (trabalho/estudos/rotina/relacionamentos).",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "26",
-  type: "radio",
-  text: "Em alguma fase (alta ou baixa), eu já tive problemas sérios com trabalho, família, colegas ou até com a lei.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "27",
-  type: "radio",
-  text: "Eu acho que essas fases podem ser explicadas principalmente por álcool, drogas, remédios ou por algum problema de saúde.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "28",
-  type: "radio",
-  text: "Essas oscilações de humor acontecem comigo há pelo menos 2 anos (ou 1 ano se eu for criança/adolescente).",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "29",
-  type: "radio",
-  text: "Nesse período, eu fiquei com sintomas (mesmo que leves) em pelo menos metade do tempo.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "30",
-  type: "radio",
-  text: "Nesse período, eu quase nunca fiquei mais de 2 meses seguidos totalmente sem sintomas.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "31",
-  type: "radio",
-  text: "Além dessas oscilações de humor, eu também tenho sintomas de ansiedade (preocupação, tensão, nervosismo).",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-},
-{
-  name: "32",
-  type: "radio",
-  text: "Em alguma fase, eu aumentei o uso de álcool ou drogas por causa do meu estado emocional ou energia.",
-  options: YNP,
-  scale: "YNP",
-  reverse: false,
-  required: false
-}
+    name: "1",
+    type: "radio",
+    section: "Bipolaridade — Triagem & História",
+    text: "Em algum período da sua vida, você teve uma fase em que ficou claramente mais animado, acelerado, expansivo ou eufórico do que o seu normal?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "2",
+    type: "radio",
+    section: "Bipolaridade — Triagem & História",
+    text: "Em algum período da sua vida, você teve uma fase em que ficou claramente mais irritado, explosivo ou impaciente do que o seu normal, de forma percebida por outras pessoas?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "3",
+    type: "radio",
+    section: "Bipolaridade — Triagem & História",
+    text: "Durante essas fases de humor elevado, eufórico ou irritado, sua energia aumentava de forma clara, como se você ficasse mais ativo, produtivo, inquieto ou difícil de desacelerar?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "4",
+    type: "radio",
+    section: "Bipolaridade — Triagem & História",
+    text: "Essas fases de aumento de humor e energia eram diferentes do seu jeito habitual de funcionar?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "5",
+    type: "radio",
+    section: "Bipolaridade — Triagem & História",
+    text: "Outras pessoas já perceberam claramente que você estava diferente nessas fases, como mais acelerado, falante, impulsivo, irritado, eufórico ou confiante demais?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "6",
+    type: "radio",
+    section: "Bipolaridade — Duração do Episódio",
+    text: "Alguma dessas fases de humor elevado, expansivo ou irritado com aumento de energia durou pelo menos 4 dias seguidos?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "7",
+    type: "radio",
+    section: "Bipolaridade — Duração do Episódio",
+    text: "Alguma dessas fases de humor elevado, expansivo ou irritado com aumento de energia durou pelo menos 7 dias seguidos?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "8",
+    type: "radio",
+    section: "Bipolaridade — Duração do Episódio",
+    text: "Alguma dessas fases foi tão intensa que você precisou ser levado ao pronto atendimento, hospitalizado ou recebeu indicação de internação?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "9",
+    type: "radio",
+    section: "Bipolaridade — Sintomas de Mania/Hipomania",
+    text: "Durante essas fases, você se sentia muito mais confiante do que o habitual, como se fosse especialmente capaz, poderoso, superior ou destinado a algo grandioso?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "10",
+    type: "radio",
+    section: "Bipolaridade — Sintomas de Mania/Hipomania",
+    text: "Durante essas fases, você dormia bem menos que o habitual e mesmo assim acordava com energia, sem sentir necessidade real de dormir mais?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "11",
+    type: "radio",
+    section: "Bipolaridade — Sintomas de Mania/Hipomania",
+    text: "Durante essas fases, você falava muito mais que o habitual, tinha dificuldade de parar de falar ou as pessoas diziam que você estava falando demais?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "12",
+    type: "radio",
+    section: "Bipolaridade — Sintomas de Mania/Hipomania",
+    text: "Durante essas fases, seus pensamentos ficavam muito acelerados, como se várias ideias passassem pela sua cabeça ao mesmo tempo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "13",
+    type: "radio",
+    section: "Bipolaridade — Sintomas de Mania/Hipomania",
+    text: "Durante essas fases, você tinha sensação de que sua mente estava pulando rapidamente de um assunto para outro, sem conseguir manter uma linha de pensamento estável?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "14",
+    type: "radio",
+    section: "Bipolaridade — Sintomas de Mania/Hipomania",
+    text: "Durante essas fases, você ficava muito mais distraído, perdendo o foco facilmente por estímulos externos, conversas, ideias, barulhos ou coisas ao redor?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "15",
+    type: "radio",
+    section: "Bipolaridade — Sintomas de Mania/Hipomania",
+    text: "Durante essas fases, você ficava muito mais ativo, produtivo ou envolvido em muitos projetos ao mesmo tempo, mesmo sem conseguir finalizar tudo?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "16",
+    type: "radio",
+    section: "Bipolaridade — Sintomas de Mania/Hipomania",
+    text: "Durante essas fases, você ficava fisicamente inquieto, agitado, andando de um lado para o outro ou com dificuldade de ficar parado?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "17",
+    type: "radio",
+    section: "Bipolaridade — Sintomas de Mania/Hipomania",
+    text: "Durante essas fases, você se envolvia mais em comportamentos impulsivos ou arriscados, como gastar demais, dirigir perigosamente, usar substâncias, fazer apostas, tomar decisões financeiras ruins ou se expor sexualmente?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "18",
+    type: "radio",
+    section: "Bipolaridade — Prejuízo e Gravidade",
+    text: "Durante essas fases, seus comportamentos causaram prejuízos importantes no trabalho, nos estudos, na família, nos relacionamentos, nas finanças ou na sua segurança?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "19",
+    type: "radio",
+    section: "Bipolaridade — Prejuízo e Gravidade",
+    text: "Durante essas fases, você tomou decisões que depois considerou muito fora do seu padrão, inadequadas, perigosas ou com consequências negativas importantes?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "20",
+    type: "radio",
+    section: "Bipolaridade — Prejuízo e Gravidade",
+    text: "Durante essas fases, familiares, amigos, colegas ou profissionais precisaram intervir porque você parecia fora do controle, acelerado demais, impulsivo demais ou com risco para si ou para outras pessoas?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "21",
+    type: "radio",
+    section: "Bipolaridade — Prejuízo e Gravidade",
+    text: "Durante essas fases, você perdeu compromissos, rompeu relações, teve conflitos graves, prejuízo financeiro, problemas no trabalho ou consequências legais por causa do seu comportamento?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "22",
+    type: "radio",
+    section: "Bipolaridade — Sintomas Psicóticos",
+    text: "Durante alguma fase de humor elevado, eufórico, irritado ou acelerado, você acreditou ter poderes especiais, missão grandiosa, dons extraordinários ou importância muito acima da realidade?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "23",
+    type: "radio",
+    section: "Bipolaridade — Sintomas Psicóticos",
+    text: "Durante alguma fase de humor elevado, eufórico, irritado ou acelerado, você ouviu vozes, viu coisas ou percebeu sinais/mensagens que outras pessoas não percebiam?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "24",
+    type: "radio",
+    section: "Bipolaridade — Sintomas Psicóticos",
+    text: "Durante alguma fase de humor elevado, eufórico, irritado ou acelerado, você ficou convencido de ideias que outras pessoas consideraram claramente irreais ou delirantes?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "25",
+    type: "radio",
+    section: "Bipolaridade — Episódio Depressivo",
+    text: "Em algum período da sua vida, você ficou por pelo menos 2 semanas seguidas com humor deprimido, tristeza intensa, vazio emocional ou sensação persistente de desânimo?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "26",
+    type: "radio",
+    section: "Bipolaridade — Episódio Depressivo",
+    text: "Em algum período da sua vida, você ficou por pelo menos 2 semanas seguidas com perda importante de interesse ou prazer pelas coisas que normalmente gostava?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "27",
+    type: "radio",
+    section: "Bipolaridade — Episódio Depressivo",
+    text: "Durante fases depressivas, você teve alteração importante de sono, como insônia, sono excessivo ou sono não reparador?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "28",
+    type: "radio",
+    section: "Bipolaridade — Episódio Depressivo",
+    text: "Durante fases depressivas, você teve alteração importante de apetite ou peso, comendo muito mais ou muito menos que o habitual?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "29",
+    type: "radio",
+    section: "Bipolaridade — Episódio Depressivo",
+    text: "Durante fases depressivas, você se sentia sem energia, cansado ou sem forças para realizar tarefas simples do dia a dia?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "30",
+    type: "radio",
+    section: "Bipolaridade — Episódio Depressivo",
+    text: "Durante fases depressivas, você se sentia mais lento, travado, sem reação ou, ao contrário, muito agitado e inquieto?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "31",
+    type: "radio",
+    section: "Bipolaridade — Episódio Depressivo",
+    text: "Durante fases depressivas, você sentia culpa excessiva, inutilidade, fracasso ou sensação de ser um peso para os outros?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "32",
+    type: "radio",
+    section: "Bipolaridade — Episódio Depressivo",
+    text: "Durante fases depressivas, você tinha dificuldade importante para pensar, se concentrar, lembrar informações ou tomar decisões?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "33",
+    type: "radio",
+    section: "Bipolaridade — Episódio Depressivo",
+    text: "Durante fases depressivas, você teve pensamentos de morte, vontade de desaparecer, ideias suicidas, planejamento suicida ou tentativa de suicídio?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "34",
+    type: "radio",
+    section: "Bipolaridade — Características Mistas",
+    text: "Durante fases de humor elevado, eufórico, irritado ou acelerado, você também sentia tristeza, vazio, desesperança ou vontade de chorar?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "35",
+    type: "radio",
+    section: "Bipolaridade — Características Mistas",
+    text: "Durante fases de humor elevado, eufórico, irritado ou acelerado, você também teve pensamentos de morte, culpa intensa, desesperança ou ideias suicidas?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "36",
+    type: "radio",
+    section: "Bipolaridade — Características Mistas",
+    text: "Durante fases depressivas, você também ficava acelerado, com muita energia, pensamentos rápidos, impulsividade ou redução da necessidade de sono?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "37",
+    type: "radio",
+    section: "Bipolaridade — Curso e Recorrência",
+    text: "Essas fases de alta energia, euforia, irritabilidade ou aceleração aconteceram mais de uma vez ao longo da vida?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "38",
+    type: "radio",
+    section: "Bipolaridade — Curso e Recorrência",
+    text: "Entre essas fases, você voltava ao seu funcionamento habitual ou ficava períodos relativamente estáveis?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "39",
+    type: "radio",
+    section: "Bipolaridade — Curso e Recorrência",
+    text: "Você percebe alternância entre fases de muita energia, aceleração ou irritabilidade e fases de desânimo, queda de energia ou depressão?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "40",
+    type: "radio",
+    section: "Bipolaridade — Curso e Recorrência",
+    text: "Essas mudanças de humor e energia costumam durar dias ou semanas, em vez de mudarem apenas em poucas horas dentro do mesmo dia?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "41",
+    type: "radio",
+    section: "Bipolaridade — Ciclotimia",
+    text: "Por pelo menos 2 anos, você teve várias fases de sintomas de elevação de humor ou energia e várias fases de sintomas depressivos, mesmo que nenhuma fase tenha sido extrema?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "42",
+    type: "radio",
+    section: "Bipolaridade — Ciclotimia",
+    text: "Durante esses períodos prolongados de oscilação de humor, você ficou poucos meses totalmente estável antes de voltar a oscilar novamente?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "43",
+    type: "radio",
+    section: "Bipolaridade — Exclusões por Substâncias e Medicamentos",
+    text: "Alguma fase de euforia, irritabilidade, aceleração ou aumento de energia começou logo após uso de álcool, cannabis, cocaína, anfetaminas, alucinógenos ou outra substância?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "44",
+    type: "radio",
+    section: "Bipolaridade — Exclusões por Substâncias e Medicamentos",
+    text: "Alguma fase de euforia, irritabilidade, aceleração ou aumento de energia começou após início, aumento ou troca de antidepressivo?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "45",
+    type: "radio",
+    section: "Bipolaridade — Exclusões por Substâncias e Medicamentos",
+    text: "Alguma fase de euforia, irritabilidade, aceleração ou aumento de energia começou após uso de estimulantes, corticoides, hormônios, medicações para emagrecimento ou outras medicações psiquiátricas?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "46",
+    type: "radio",
+    section: "Bipolaridade — Exclusões por Substâncias e Medicamentos",
+    text: "Quando essas fases começaram após uso de substância ou medicação, os sintomas continuaram intensos mesmo depois que o efeito esperado da substância ou medicação já deveria ter passado?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "47",
+    type: "radio",
+    section: "Bipolaridade — Exclusões Clínicas",
+    text: "Alguma fase de euforia, irritabilidade, aceleração ou aumento de energia aconteceu junto com doença clínica, alteração hormonal, problema neurológico, privação extrema de sono ou outra condição médica importante?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "48",
+    type: "radio",
+    section: "Bipolaridade — Exclusões Clínicas",
+    text: "As fases de aceleração, impulsividade ou distração acontecem desde a infância de forma constante, e não apenas em episódios específicos de dias ou semanas?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "49",
+    type: "radio",
+    section: "Bipolaridade — Exclusões Clínicas",
+    text: "Suas mudanças de humor costumam acontecer principalmente como reação imediata a rejeição, críticas, conflitos, frustrações ou medo de abandono?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "50",
+    type: "radio",
+    section: "Bipolaridade — Exclusões Clínicas",
+    text: "Suas mudanças de humor costumam mudar várias vezes no mesmo dia, sem formar fases claras de vários dias com aumento persistente de energia?",
+    options: FREQ5,
+    scale: "FREQ5",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "51",
+    type: "radio",
+    section: "Bipolaridade — Histórico Familiar",
+    text: "Algum familiar biológico próximo já recebeu diagnóstico de transtorno bipolar, mania, hipomania, depressão recorrente grave ou internação psiquiátrica por alteração de humor?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "52",
+    type: "radio",
+    section: "Bipolaridade — Histórico Familiar",
+    text: "Algum familiar biológico próximo já apresentou fases de euforia, aceleração, impulsividade, redução de sono, gastos excessivos ou internação por comportamento desorganizado?",
+    options: YNP,
+    scale: "YNP",
+    reverse: false,
+    required: false
+  },
+
+  {
+    name: "53",
+    type: "radio",
+    section: "Bipolaridade — Impacto Atual",
+    text: "Atualmente, suas oscilações de humor, energia ou impulsividade prejudicam sua vida profissional, acadêmica, familiar, social, financeira ou afetiva?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "54",
+    type: "radio",
+    section: "Bipolaridade — Impacto Atual",
+    text: "Atualmente, existe risco de você tomar decisões impulsivas, se colocar em perigo, gastar de forma descontrolada, brigar, se expor sexualmente ou agir sem medir consequências?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  },
+  {
+    name: "55",
+    type: "radio",
+    section: "Bipolaridade — Impacto Atual",
+    text: "Atualmente, existe risco de autoagressão, suicídio, comportamento perigoso ou necessidade de cuidado imediato por causa do seu humor?",
+    options: SEVER4,
+    scale: "SEVER4",
+    reverse: false,
+    required: false
+  }
 ];
 
 const INDICATORS_CONFIG = {};
